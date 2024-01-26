@@ -1,9 +1,12 @@
+import os
 import yaml
+
+HERE = os.path.dirname(__file__)
 
 
 def load_model_config(stage, mode):
     # load special config for each model
-    config_path = f'config/stage_{stage}.yaml'
+    config_path = os.path.join(HERE, f'stage_{stage}.yaml')
     print(f'[!] load configuration from {config_path}')
     with open(config_path) as f:
         configuration = yaml.load(f, Loader=yaml.FullLoader)
@@ -34,7 +37,7 @@ def load_config(args):
 
 
 def load_base_config():
-    config_path = f'config/base.yaml'
+    config_path = os.path.join(HERE, f'base.yaml')
     with open(config_path) as f:
         configuration = yaml.load(f, Loader=yaml.FullLoader)
     print(f'[!] load base configuration: {config_path}')
