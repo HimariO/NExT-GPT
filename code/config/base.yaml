@@ -9,7 +9,7 @@ max_length: 512 # max length of the user input prompt
 logging_step: 5
 num_clip_tokens: 77
 gen_emb_dim: 768
-pretrained_ckpt_path: ../ckpt/pretrained_ckpt/
+pretrained_ckpt_path: /home/ray/NExT-GPT/ckpt/pretrained_ckpt/
 
 # ========= LLM ========== #
 vicuna_version: 7b_v0 # [7b_v0, ]
